@@ -4,11 +4,13 @@ machine:
     version: 2.1.2
 
 dependencies:
+  override:
+    # add jekyll serve?
   post:
     - bundle exec jekyll build
 
 test:
-  override:
+  pre:
     - bundle exec jekyll serve
 
   post:
