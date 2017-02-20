@@ -8,5 +8,11 @@ dependencies:
     - bundle exec jekyll build
 
 test:
+  pre:
+    - bundle exec jekyll serve
+
+  override:
+    - bundle exec rspec
+
   post:
     - bundle exec htmlproofer ./_site --check-html --disable-external
