@@ -5,13 +5,5 @@ machine:
 
 dependencies:
   override:
-    # add jekyll serve?
-  post:
-    - bundle exec jekyll build
-
-test:
-  pre:
-    - bundle exec jekyll serve
-
-  post:
-    - bundle exec htmlproofer ./_site --check-html --disable-external
+    - bundle install
+    - bundle exec jekyll serve --incremental
